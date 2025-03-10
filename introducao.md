@@ -3,7 +3,7 @@
 Nesta breve introdução sobre teste de software, iremos abordar a importância dos testes automatizados para o desenvolvimento de software.
 Também iremos apresentar alguns exemplos dos principais tipos de testes: unidade, integração e e2e.
 
-## 1.1 O que é Teste de Software?
+## 1. O que é Teste de Software?
 
 Sistemas de software são estruturas complexas, muitas vezes formados por milhares de linhas de código, métodos e classes.
 A figura abaixo representa os relacionamentos existentes entre os métodos e as classes em um software de porte médio.
@@ -45,7 +45,7 @@ Portanto, a maior parte dos testes atualmente são automatizados.
 > Todo software é testado, pelos desenvolvedores ou pelos usuários.
 > Não deixe que os usuários encontre erros para você (fonte: The Pragmatic Programmer).
 
-## 1.2 Testes Automatizados
+## 2. Testes Automatizados
 
 Testes automatizados, em essência, são pequenos programas que chamam outros programas que desejamos testar e verificam se eles retornam os valores esperados.
 A grande vantagem desses testes é que podemos rodá-los diversas vezes (centenas ou milhares de vezes por dia).
@@ -126,7 +126,7 @@ O exemplo acima é intencionalmente muito simples.
 Na prática, testes automatizados são escritos com o suporte de **frameworks de teste**.
 No entanto, em essência, todo teste automatizado é bastante similar ao exemplo apresentado.
 
-## 1.3 Frameworks de Teste
+## 3. Frameworks de Teste
 
 Frameworks de teste são utilizados para a criação de testes automatizados.
 Hoje em dia, existem centenas de frameworks de teste disponíveis para as mais variadas linguagens de programação.
@@ -290,7 +290,7 @@ Conforme esperado, a informação mostrada na IDE é exatamente a mesma da linha
 
 ![PyCharm with failed test](figs/pycharm-failed-test.png)
 
-## 1.4 Tipos de Teste
+## 4. Tipos de Teste
 
 Existem diferentes tipos de testes para resolver diferentes problemas.
 Uma forma de classificar os testes é através da **pirâmide de testes**, proposta por Mike Cohn ([link](https://learning.oreilly.com/library/view/succeeding-with-agile/9780321660534)) e amplamente adotada na literatura e na indústria de software.
@@ -454,7 +454,7 @@ pelo livro *Software Engineering at Google* ([link](https://www.oreilly.com/libr
 
 ![Other test pyramids](figs/other-pyramids.png)
 
-## 1.5 Benefícios
+## 5. Benefícios
 
 No início do capítulo, vimos que testes de software ajudam na detecção de erros no software.
 No entanto, esse não é o único benefício dos testes.
