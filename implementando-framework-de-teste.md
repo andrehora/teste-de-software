@@ -1,12 +1,13 @@
 # Implementando um Framework de Teste
 
 Iremos desenvolver e testar um framework de teste no estilo [xUnit](https://en.wikipedia.org/wiki/XUnit).
-Implementar um framework de teste é bastante interessante por duas razões principais:
+Criar um framework de teste é interessante por algumas razões:
 
-- Aprender sobre detalhes internos do seu funcionamento, isto é, como um framework de teste lida com a execução dos testes e das fixtures.
-- Conhecer na prática conceitos chave em teste de software, tais como *test case*, *test suite* e *test runner*.
+- Aprender detalhes sobre o seu design e funcionamento, por exemplo, como testes e fixtures são executados.
+- Conhecer na prática (e implementar) conceitos chave, tais como *test case*, *test suite* e *test runner*.
+- Exercitar de forma aplicada boas práticas de desenvolvimento e teste de software.
 
-Um framework de teste é um software como outro qualquer, portanto, também deve ser testado.
+Note que um framework de teste é um software como outro qualquer, portanto, também deve ser testado.
 Porém, existe um desafio: devemos testar o código desenvolvido com o próprio framework.
 O framework de teste será desenvolvido na linguagem Python e pode ser visto como uma prova de conceito ([MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)) do framework padrão de Python [unittest](https://docs.python.org/3/library/unittest.html).
 
