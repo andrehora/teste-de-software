@@ -42,7 +42,7 @@ Em seguida, realizamos três passos: chamar o método `set_up`, chamar o método
 
 Observe que a classe de teste `test_case_class` é instanciada uma vez para *cada* método de teste.
 Além disso, as fixtures (`set_up` e `tear_down`) são chamadas em cada instância.
-Por exemplo, suponha uma classe de teste `TestFoo` com 10 métodos de teste; `TestFoo` será instanciada 10 vezes pelo framework de teste, isto é, uma vez para cada método de teste.
+Por exemplo, suponha uma classe de teste `MyTest` com 10 métodos de teste; `MyTest` será instanciada 10 vezes pelo framework de teste, isto é, uma vez para cada método de teste.
 Cada fixture também será executada 10 vezes, ou seja, uma vez para cada método de teste.
 Isso ocorre pois cada método de teste deve ser executado de forma completamente independente dos demais.
 
@@ -60,12 +60,12 @@ As principais classes em um framework de teste no estilo xUnit são:
 
 ## 2. Classe TestCase
 
-Geralmente, para criar casos de teste, definimos uma classe de teste que estende da classe `TestCase` fornecida pelo framework, conforme apresentando o código abaixo:
+Para criar casos de teste, definimos uma classe de teste que estende da classe `TestCase` fornecida pelo framework:
 
 ```
 class MyTest extends TestCase {
-    set_up() { .... }
-    tear_down() { .... }
+    set_up() { ... }
+    tear_down() { ... }
     test_a() { ... }
     test_b() { ... }
     test_c() { ... }
