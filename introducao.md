@@ -11,7 +11,7 @@ Nota-se o quão complexo um sistema pode se tornar.
 Ao longo do tempo e à medida que novos requisitos são demandados pelos usuários, tal complexidade pode aumentar.
 Portanto, manter e evoluir um sistema de software é uma atividade desafiadora e não trivial.
 
-![software complexity - Moose](cap1/software-system-visualization.png)
+![software complexity - Moose](figs/software-system-visualization.png)
 
 Ao realizar manutenção e evolução de software, os desenvolvedores podem inserir erros, que, por sua vez, podem chegar aos usuários e causar danos.
 Os tipos de erros variam bastante, desde um simples defeito na UI (por exemplo, um botão no lugar incorreto), a erros de cálculos, gerando grandes prejuízos ([link](https://en.wikipedia.org/wiki/List_of_software_bugs)).
@@ -288,7 +288,7 @@ FAILED (failures=1)
 A figura a seguir apresenta o mesmo relatório, mas gerado a partir da IDE de programação PyCharm para Python.
 Conforme esperado, a informação mostrada na IDE é exatamente a mesma da linha de comando, indicando para o desenvolvedor o total de testes e falhas, assim como a localização das falhas.
 
-![PyCharm with failed test](cap1/pycharm-failed-test.png)
+![PyCharm with failed test](figs/pycharm-failed-test.png)
 
 ## 1.4 Tipos de Teste
 
@@ -296,7 +296,7 @@ Existem diferentes tipos de testes para resolver diferentes problemas.
 Uma forma de classificar os testes é através da **pirâmide de testes**, proposta por Mike Cohn ([link](https://learning.oreilly.com/library/view/succeeding-with-agile/9780321660534)) e amplamente adotada na literatura e na indústria de software.
 A pirâmide de testes divide os testes em três tipos: testes de unidade, testes de integração e testes end-to-end (e2e).
 
-![Test pyramid](cap1/test-pyramid.png)
+![Test pyramid](figs/test-pyramid.png)
 
 ### Testes de Unidade
 
@@ -452,7 +452,7 @@ Além do Selenium, existem diversos frameworks que facilitam a criação de test
 A pirâmide de testes apresentada no início desta seção é a forma mais comum para se categorizar os principais tipos de testes, mas não é a única. Existem diversas pequenas variações da pirâmide de teste. A figura a seguir apresenta algumas dessas variações: as duas pirâmides superiores são versões propostas por Martin Fowler ([link](https://martinfowler.com/bliki/TestPyramid.html)) e
 pelo livro *Software Engineering at Google* ([link](https://www.oreilly.com/library/view/software-engineering-at/9781492082781)), respectivamente. Ambas são equivalentes à pirâmide original proposta por Mike Cohn, que divide os testes em três categorias. Já as duas pirâmides inferiores são versões mais detalhadas da versão original ([link1](https://www.devopsgroup.com/insights/resources/diagrams/all/the-testing-pyramid/) e [link2](https://alisterbscott.com/kb/testing-pyramids)). A principal diferença é um maior detalhamento dos testes nas camadas intermediárias e a separação no topo da pirâmide dos **testes manuais** (também conhecidos como **testes exploratórios**). De fato, todas as pirâmides apontam para a mesma ideia, onde os testes da base são mais rápidos, baratos e frequentes enquanto os testes no topo são mais lentos, caros e raros.
 
-![Other test pyramids](cap1/other-pyramids.png)
+![Other test pyramids](figs/other-pyramids.png)
 
 ## 1.5 Benefícios
 
