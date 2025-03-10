@@ -3,8 +3,8 @@
 Iremos desenvolver e testar um framework de teste no estilo [xUnit](https://en.wikipedia.org/wiki/XUnit).
 Implementar um framework de teste é bastante interessante por duas razões principais:
 
-- Iremos aprender sobre detalhes internos do seu funcionamento, isto é, como um framework de teste lida com a execução dos testes e das fixtures.
-- Podemos conhecer na prática conceitos chave em teste de software, tais como *test case*, *test suite* e *test runner*.
+- Aprender sobre detalhes internos do seu funcionamento, isto é, como um framework de teste lida com a execução dos testes e das fixtures.
+- Conhecer na prática conceitos chave em teste de software, tais como *test case*, *test suite* e *test runner*.
 
 Um framework de teste é um software como outro qualquer, portanto, também deve ser testado.
 Porém, existe um desafio: devemos testar o código desenvolvido com o próprio framework.
