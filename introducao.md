@@ -1,4 +1,4 @@
-# Introdução
+# Introdução ao Teste de Software
 
 Nesta breve introdução sobre teste de software, iremos abordar a importância dos testes automatizados para o desenvolvimento de software.
 Também iremos apresentar alguns exemplos dos principais tipos de testes: unidade, integração e e2e.
