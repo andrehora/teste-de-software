@@ -135,7 +135,7 @@ O método `run` implementa o padrão de projeto [template method](https://refact
 O *template method* é um método em uma superclasse que define o "esqueleto" de um algoritmo com um conjunto de passos que devem ser redefinidos nas subclasses.
 Para utilizar esse algoritmo, o cliente deve criar a sua própria subclasse.
 No nosso contexto de testes, o *template method* `run` define o esqueleto com os seguintes passos: chamar o método `set_up`, chamar o método de teste que possui nome `test_method_name` e chamar o método `tear_down`.
-Note que esses passos são similares ao pseudocódigo apresentado no início da capítulo.
+Note que esses passos são similares ao [pseudocódigo](https://github.com/andrehora/teste-de-software/blob/main/implementando-framework-de-teste.md#1-introdu%C3%A7%C3%A3o) apresentado no início.
 
 Para entender melhor o funcionamento de `TestCase`, vamos fazer um pequeno teste.
 Considere a classe `MyTest` a seguir que estende de `TestCase`:
@@ -355,8 +355,8 @@ Cada teste de `TestCaseTest` executa os testes de `TestStub` e verifica o result
 - O teste `test_result_failure_run` verifica se `test_failure` gera uma falha, enquanto o teste `test_result_error_run` verifica se `test_error` lança uma exceção.
 - Por fim, o teste `test_result_multiple_run` executa os três testes de `TestStub` e verifica se o resultado gerado é `3 run, 1 failed, 1 error`.
 
-> :information_source: **NOTA**  
-> Observe que todos os testes utilizam o comando [assert](https://stackoverflow.com/questions/5142418/what-is-the-use-of-assert-in-python) nativo de Python para verificar uma condição. Caso essa condição não seja verdade, a exceção `AssertionError` é lançada. Mais adiante neste capítulo, iremos desenvolver nossos próprios comandos asserts, tais como `assert_equal`, `assert_true` e `assert_false`.
+> [!NOTE] 
+> Observe que todos os testes utilizam o comando [assert](https://stackoverflow.com/questions/5142418/what-is-the-use-of-assert-in-python) nativo de Python para verificar uma condição. Caso essa condição não seja verdade, a exceção `AssertionError` é lançada. Mais adiante, iremos desenvolver nossos próprios comandos asserts, tais como `assert_equal`, `assert_true` e `assert_false`.
 Por enquanto, o `assert` nativo de Python é suficiente!
 
 Para saber se o teste `TestCaseTest` está de fato correto, devemos, claro, executar esse teste.
