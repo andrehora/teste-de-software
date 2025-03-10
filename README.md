@@ -1,3 +1,4 @@
 # Introdução ao Teste de Software
 
-- [Introdução](introducao.md)
+- [Introdução](introducao-teste.md)
+- [Implementando um Framework de Teste](implementando-framework-de-teste.md)
