@@ -50,10 +50,10 @@ Outro ponto importante (não mostrado no pseudocódigo) é que resultados podem 
 Por exemplo, podemos coletar quantos testes foram executados, os testes que falharam, o tempo de execução, dentre outras informações.
 
 Para implementar os conceitos acima, utilizamos orientação a objetos.
-As principais classe de um framework no estilo xUnit são:
+As principais classes em um framework de teste no estilo xUnit são:
 
 - TestCase: Classe base utilizada para criar novos casos de teste.
-- TestSuite: Representa uma coleção de casos de testes.
+- TestSuite: Representa uma conjunto de casos de testes.
 - TestResult: Sumariza os resultados da execução dos testes.
 - TestLoader: Utilizada para criar suítes de teste a partir de casos de casos de teste.
 - TestRunner: Orquestra a execução dos testes e fornece relatórios.
