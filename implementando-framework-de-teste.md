@@ -21,31 +21,29 @@ Frameworks de teste facilitam a escrita, a execução e a geração de relatóri
 
 - **Relatórios:** Quando os testes são executados, queremos facilmente identificar os testes que falharam ou verificar que todos passaram. Portanto, frameworks de teste devem também gerar tais resultados para os desenvolvedores.
 
-Mas como um framework de teste garante que os testes são executados de forma independente?
 O pseudocódigo abaixo ilustra de forma simplificada *como* os métodos de teste são executados em um framework de teste:
 
 ```
-TestSuite = coleção de classes de teste
+test_case_classes = conjunto de classes de teste
 
-for TestCase in TestSuite {
-    for test_method in TestCase {
-        tc = new TestCase()     // instancia classe de teste
-        
-        tc.set_up()             // chama método de setup 
-        tc.test_method()        // chama método de teste 
-        tc.tear_down()          // chama método de teardown 
+for test_case_class in test_case_classes {
+    for test_method in test_case_class {
+        tc = new test_case_class()  // instancia classe de teste
+        tc.set_up()                 // chama método de setup 
+        tc.run(test_method)         // chama método de teste 
+        tc.tear_down()              // chama método de teardown 
     }
 }
 ```
 
-Dado uma coleção de classes de teste chamada `TestSuite`, iteramos em cada classe de teste `TestCase` e em cada método de teste `test_method` de `TestCase`.
+Dado um conjunto de classes de teste `test_case_classes`, iteramos em cada classe de teste `test_case_class` e em cada método de teste `test_method`.
 Para cada método de teste `test_method` instanciamos a sua respectiva classe de teste.
 Em seguida, realizamos três passos: chamar o método `set_up`, chamar o método de teste `test_method` e chamar o método `tear_down`.
 
-Observe que a classe de teste `TestCase` é instanciada uma vez para cada método de teste.
+Observe que a classe de teste `test_case_class` é instanciada uma vez para *cada* método de teste.
 Além disso, as fixtures (`set_up` e `tear_down`) são chamadas em cada instância.
-Por exemplo, suponha uma classe de teste `MyTest` com 10 métodos de teste, `MyTest` será instanciada 10 vezes pelo framework de teste, isto é, uma vez para cada método de teste.
-As fixtures de `MyTest` também serão chamadas 10 vezes, ou seja, uma vez para cada método de teste.
+Por exemplo, suponha uma classe de teste `TestFoo` com 10 métodos de teste; `TestFoo` será instanciada 10 vezes pelo framework de teste, isto é, uma vez para cada método de teste.
+Cada fixture também será executada 10 vezes, ou seja, uma vez para cada método de teste.
 Isso ocorre pois cada método de teste deve ser executado de forma completamente independente dos demais.
 
 Outro ponto importante (não mostrado no pseudocódigo) é que resultados podem ser coletados durante a execução dos testes.
