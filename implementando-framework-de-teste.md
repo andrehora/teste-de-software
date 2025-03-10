@@ -15,9 +15,11 @@ O framework de teste será desenvolvido na linguagem Python e pode ser visto com
 
 Frameworks de teste facilitam a escrita, a execução e a geração de relatórios de teste:
 
-- **Escrita de testes:** Um conjunto de classes e métodos são fornecidos pelos frameworks de teste para facilitar a escrita de testes.
-- **Execução de testes:** No mundo real, sistemas de software podem conter milhares de testes. Portanto, frameworks de teste devem permitir a execução dos testes de forma simples e rápida.
-- **Relatórios de teste:** Quando os testes são executados, queremos facilmente identificar os testes que falharam ou verificar que todos passaram. Portanto, frameworks de teste devem também gerar tais resultados para os desenvolvedores.
+- **Escrita:** Um conjunto de classes e métodos (APIs) são fornecidos pelos frameworks de teste para facilitar a escrita de testes, tais como `assert_equals`, `set_up`, `tear_down`, etc.
+  
+- **Execução:** No mundo real, sistemas de software podem conter milhares de testes. Portanto, frameworks de teste devem permitir a execução dos testes de forma simples e rápida.
+
+- **Relatórios:** Quando os testes são executados, queremos facilmente identificar os testes que falharam ou verificar que todos passaram. Portanto, frameworks de teste devem também gerar tais resultados para os desenvolvedores.
 
 Mas como um framework de teste garante que os testes são executados de forma independente?
 O pseudocódigo abaixo ilustra de forma simplificada *como* os métodos de teste são executados em um framework de teste:
