@@ -573,7 +573,7 @@ As classes `TestLoader` e `TestRunner` surgem para resolver esse problema.
 
 Queremos que os métodos de teste de uma classe de teste sejam descobertos automaticamente, sem a necessidade de escrever o nome de cada método de teste.
 Métodos de teste são todos aqueles na classe de teste que possuem o prefixo *test*.
-Dado uma classe de teste, `TestLoader` encontra os métodos seus métodos de teste através de `get_test_case_names` e retorna uma suíte pronta para ser executada através de `make_suite`:
+Dado uma classe de teste, `TestLoader` encontra os seus métodos de teste através de `get_test_case_names` e retorna uma suíte pronta para ser executada através de `make_suite`:
 
 ```python
 class TestLoader:
@@ -743,7 +743,7 @@ def assert_in(self, member, container):
 > **asserts no unittest.**
 > Apresentamos a seguir a definição do próprio framework unittest para os métodos `assert_true`, `assert_false` e `assertIn`.
 > Observe a similaridade com a nossa implementação.
-> De fato, a principal diferença é que (por simplicidade) não implementamos a possibilidade de definir uma mensagem de falha ([link (https://github.com/python/cpython/blob/main/Lib/unittest/case.py)).
+> De fato, a principal diferença é que (por simplicidade) não implementamos a possibilidade de definir uma mensagem de falha ([link](https://github.com/python/cpython/blob/main/Lib/unittest/case.py)).
 
 ```python
 # test_case.py - unittest
