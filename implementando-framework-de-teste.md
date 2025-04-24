@@ -671,6 +671,12 @@ suite.run(result)
 print(result.summary())
 ```
 
+Resultado:
+
+```
+4 run, 0 failed, 0 error
+```
+
 Observe que *não* precisamos mais escrever o nome dos métodos de teste, uma vez que `TestLoader` detecta automaticamente os testes presentes na classe de teste.
 
 Apesar do código acima ser mais simples que os anteriores, ele ainda apresenta alguns detalhes que incomodam.
@@ -701,6 +707,12 @@ loader = TestLoader()
 suite = loader.make_suite(TestLoaderTest)
 runner = TestRunner()
 runner.run(suite)
+```
+
+Resultado:
+
+```
+4 run, 0 failed, 0 error
 ```
 
 Outro ponto importante é que diferentes *runners* podem ser criados (por exemplo, `WebTestRunner`, `JSONTestRunner`, `UITestRunner`, etc.), sem a necessidade de modificar as classes *core* do framework: `TestCase`, `TestSuite` e `TestLoader`.
