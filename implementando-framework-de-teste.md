@@ -525,7 +525,7 @@ class TestSuite:
 
 ### Testando TestSuite
 
-A seguir criamos a classe de teste `TestSuiteTest` para testar `TestSuite`.
+A seguir, criamos a classe de teste `TestSuiteTest` para testar `TestSuite`.
 Neste caso, também iremos utilizar a classe `TestStub` para dar suporte a criação dos testes:
 
 ```python
