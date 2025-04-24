@@ -661,7 +661,7 @@ class TestLoaderTest(TestCase):
         assert names == []
 ```
 
-Podemos, portanto, utilizar `TestLoader` para executar os testes da seguinte forma:
+Podemos, portanto, utilizar `TestLoader` para executar os testes da seguinte forma, simplificando bastante a execução dos testes:
 
 ```python
 result = TestResult()
@@ -671,7 +671,8 @@ suite.run(result)
 print(result.summary())
 ```
 
-Observe que não precisamos mais escrever o nome dos métodos de teste, uma vez que `TestLoader` detecta automaticamente os testes presentes na classe de teste.
+Observe que *não* precisamos mais escrever o nome dos métodos de teste, uma vez que `TestLoader` detecta automaticamente os testes presentes na classe de teste.
+
 Apesar do código acima ser mais simples que os anteriores, ele ainda apresenta alguns detalhes que incomodam.
 Por exemplo, devemos instanciar `TestResult` e passar como argumento do método `run`.
 Além disso, devemos imprimir o relatório da execução.
