@@ -624,6 +624,8 @@ class TestLoader:
         return suite
 ```
 
+### TestLoader
+
 Os testes a seguir verificam alguns comportamentos de `TestLoader` para criar suítes (`test_create_suite` e `test_create_suite_of_suites`) e encontrar métodos de teste (`test_get_multiple_test_case_names` e `test_get_no_test_case_names`):
 
 ```python
@@ -682,6 +684,9 @@ Observe que *não* precisamos mais escrever o nome dos métodos de teste, uma ve
 Apesar do código acima ser mais simples que os anteriores, ele ainda apresenta alguns detalhes que incomodam.
 Por exemplo, devemos instanciar `TestResult` e passar como argumento do método `run`.
 Além disso, devemos imprimir o relatório da execução.
+Por isso, precisamos de uma outra classe: `TestRunner`.
+
+### TestRunner
 
 A classe `TestRunner` surge para resolver esses problemas: ela orquestra a execução dos testes e fornece relatórios.
 `TestRunner` contém uma referência para `TestResult`.
@@ -705,6 +710,7 @@ Portanto, podemos rodar os testes da seguinte forma:
 ```python
 loader = TestLoader()
 suite = loader.make_suite(TestLoaderTest)
+
 runner = TestRunner()
 runner.run(suite)
 ```
@@ -717,7 +723,35 @@ Resultado:
 
 Outro ponto importante é que diferentes *runners* podem ser criados (por exemplo, `WebTestRunner`, `JSONTestRunner`, `UITestRunner`, etc.), sem a necessidade de modificar as classes *core* do framework: `TestCase`, `TestSuite` e `TestLoader`.
 
-## 7. Asserts
+## 7. Executando Todos os Testes
+
+Temos a até o momento três classes de teste: `TestCaseTest` (8 testes), `TestSuiteTest` (3 testes) e `TestLoaderTest` (4 testes).
+
+Mas como podemos executar todos os 15 testes?
+Para executar todos os testes, devemos utilizar as classes `TestLoader`, `TestSuite` e `TestRunner`:
+
+```python
+loader = TestLoader()
+test_case_suite = loader.make_suite(TestCaseTest)
+test_suite_suite = loader.make_suite(TestSuiteTest)
+test_load_suite = loader.make_suite(TestLoaderTest)
+
+suite = TestSuite()
+suite.add_test(test_case_suite)
+suite.add_test(test_suite_suite)
+suite.add_test(test_load_suite)
+
+runner = TestRunner()
+runner.run(suite)
+```
+
+Resultado:
+
+```
+15 run, 0 failed, 0 error
+```
+
+## 8. Comandos Assert
 
 Implementamos até o momento as principais classes do nosso framework de teste: `TestCase`, `TestRunner`, `TestSuite`, `TestLoader` e `TestRunner`.
 Podemos facilmente executar os testes de uma classe que estende `TestCase` e gerar um relatório simples de saída no forma to `X run, Y failed, Z error`.
