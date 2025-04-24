@@ -128,17 +128,11 @@ class TestCase:
         pass
 ```
 
-O contrutor (`__init__`) recebe uma string com o nome do método de teste que deve ser executado.
-Mas como executar esse método de teste com base apenas no seu nome?
+- O contrutor (`__init__`) recebe uma string com o nome do método de teste que deve ser executado. Mas como executar esse método de teste com base apenas no seu nome? Felizmente, podemos utilizar a função nativa de Python [getattr](https://docs.python.org/3/library/functions.html#getattr). Dado uma string com o nome de um método, `getattr` nos permite executar esse método, por exemplo, `getattr(x, 'test_foo')` é equivalente a `x.test_foo`.
 
-Felizmente, podemos utilizar a função nativa de Python [getattr](https://docs.python.org/3/library/functions.html#getattr).
-Dado uma string com o nome de um método, `getattr` nos permite executar esse método, por exemplo, `getattr(x, 'test_foo')` é equivalente a `x.test_foo`.
+- O método `run` implementa o padrão de projeto [template method](https://refactoring.guru/design-patterns/template-method). O *template method* é um método em uma superclasse que define o "esqueleto" de um algoritmo com um conjunto de passos que devem ser redefinidos nas subclasses. Para utilizar esse algoritmo, o cliente deve criar a sua própria subclasse.
 
-O método `run` implementa o padrão de projeto [template method](https://refactoring.guru/design-patterns/template-method).
-O *template method* é um método em uma superclasse que define o "esqueleto" de um algoritmo com um conjunto de passos que devem ser redefinidos nas subclasses.
-Para utilizar esse algoritmo, o cliente deve criar a sua própria subclasse.
-No nosso contexto de testes, o *template method* `run` define o esqueleto com os seguintes passos: chamar o método `set_up`, chamar o método de teste que possui nome `test_method_name` e chamar o método `tear_down`.
-Note que esses passos são similares ao [pseudocódigo](https://github.com/andrehora/teste-de-software/blob/main/implementando-framework-de-teste.md#1-introdu%C3%A7%C3%A3o) apresentado no início.
+- No nosso contexto de testes, o *template method* `run` define o esqueleto com os seguintes passos: chamar o método `set_up`, chamar o método de teste que possui nome `test_method_name` e chamar o método `tear_down`. Note que esses passos são similares ao [pseudocódigo](https://github.com/andrehora/teste-de-software/blob/main/implementando-framework-de-teste.md#1-introdu%C3%A7%C3%A3o) apresentado no início.
 
 Para entender melhor o funcionamento de `TestCase`, vamos fazer um pequeno teste.
 Considere a classe `MyTest` a seguir que estende de `TestCase`:
