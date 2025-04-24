@@ -9,8 +9,9 @@ Criar um framework de teste é interessante por algumas razões:
 
 Note que um framework de teste é um software como outro qualquer, portanto, também deve ser testado.
 Porém, existe um desafio: devemos testar o código desenvolvido com o próprio framework.
-O framework de teste será desenvolvido na linguagem Python e pode ser visto como uma prova de conceito ([MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)) do framework padrão de Python [unittest](https://docs.python.org/3/library/unittest.html).
+
 Este framework de teste é adaptado do livro TDD by Example de Kent Beck.
+O framework de teste será desenvolvido na linguagem Python e pode ser visto como uma prova de conceito ([MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)) do framework padrão de Python [unittest](https://docs.python.org/3/library/unittest.html).
 
 ## 1. Introdução
 
