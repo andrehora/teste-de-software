@@ -457,6 +457,7 @@ Ao rodar todos os testes de `TestCaseTest`, teremos agora 8 testes passando com 
 
 ```python
 ...
+
 test = TestCaseTest('test_was_set_up')
 test.run(result)
 
