@@ -567,7 +567,7 @@ class TestSuiteTest(TestCase):
 - O teste `test_suite_success_run` executa um teste através da suíte.
 - Por fim, o teste `test_suite_multiple_run` executa múltiplos testes através da suíte.
 
-Observe que podemos utilizar nossa própria suíte de testes para executar os testes de `TestCaseTest` e `TestSuiteTest`:
+Observe que podemos utilizar nossa própria suíte de testes para executar os 8 testes de `TestCaseTest` e os 3 testes de `TestSuiteTest`:
 
 ```python
 result = TestResult()
@@ -582,8 +582,18 @@ suite.add_test(TestCaseTest('test_was_run'))
 suite.add_test(TestCaseTest('test_was_tear_down'))
 suite.add_test(TestCaseTest('test_template_method'))
 
+suite.add_test(TestSuiteTest('test_suite_size'))
+suite.add_test(TestSuiteTest('test_suite_success_run'))
+suite.add_test(TestSuiteTest('test_suite_multiple_run'))
+
 suite.run(result)
 print(result.summary())
+```
+
+Resultado:
+
+```
+11 run, 0 failed, 0 error
 ```
 
 ## 6. Classes TestLoader e TestRunner
