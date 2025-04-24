@@ -60,7 +60,7 @@ As principais classes em um framework de teste no estilo xUnit são:
 
 ## 2. Classe TestCase
 
-Para criar casos de teste, definimos uma classe de teste que estende da classe `TestCase` fornecida pelo framework:
+Para criar casos de teste no xUnit, definimos uma classe de teste que estende da classe `TestCase` fornecida pelo framework:
 
 ```
 class MyTest extends TestCase {
