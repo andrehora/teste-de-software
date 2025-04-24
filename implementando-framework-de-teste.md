@@ -72,7 +72,7 @@ class MyTest extends TestCase {
 }
 ```
 
-Mas como executamos esses testes?
+Mas como esses testes são executados pelo framework de teste?
 
 Normalmente, não paramos para pensar sobre isso pois os frameworks de teste nos fornecem ferramentas para simplificar o processo de execução dos testes, por exemplo, via linha de comando, IDE de programação, etc.
 No entanto, frameworks de teste também devem permitir a execução dos testes diretamente via código.
