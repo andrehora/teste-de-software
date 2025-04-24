@@ -130,6 +130,7 @@ class TestCase:
 
 O contrutor (`__init__`) recebe uma string com o nome do método de teste que deve ser executado.
 Mas como executar esse método de teste com base apenas no seu nome?
+
 Felizmente, podemos utilizar a função nativa de Python [getattr](https://docs.python.org/3/library/functions.html#getattr).
 Dado uma string com o nome de um método, `getattr` nos permite executar esse método, por exemplo, `getattr(x, 'test_foo')` é equivalente a `x.test_foo`.
 
