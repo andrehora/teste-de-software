@@ -89,7 +89,7 @@ test = new MyTest('test_c')
 test.run()
 ```
 
-No código acima, o método `run` de `TestCase` é responsável por chamar as fixtures do teste assim como chamar o método de teste em si.
+No código acima, o método `run` da classe `TestCase` é responsável por chamar as fixtures do teste assim como executar o método de teste em si.
 Note que cada método de teste é executado em uma instância de `MyTest`, uma vez que os métodos de teste são *independentes*.
 
 Uma alternativa é utilizar uma suíte de testes para evitar duplicação de código e simplificar a execução:
