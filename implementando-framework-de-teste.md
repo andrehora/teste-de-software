@@ -455,6 +455,23 @@ Note que:
 
 Ao rodar todos os testes de `TestCaseTest`, teremos agora 8 testes passando com sucesso:
 
+```python
+...
+test = TestCaseTest('test_was_set_up')
+test.run(result)
+
+test = TestCaseTest('test_was_run')
+test.run(result)
+
+test = TestCaseTest('test_was_tear_down')
+test.run(result)
+
+test = TestCaseTest('test_template_method')
+test.run(result)
+
+print(result.summary())
+```
+
 ```
 8 run, 0 failed, 0 error
 ```
